@@ -2,7 +2,7 @@
 
     <servlet>
         <servlet-name>First</servlet-name>
-        <servlet-class>servlets.FirstServlet</servlet-class>
+        <servlet-class>servlets.servlets.FirstServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>First</servlet-name>
@@ -11,7 +11,7 @@
 
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>servlets.HelloServlet</servlet-class>
+        <servlet-class>servlets.servlets.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
@@ -29,7 +29,7 @@
 
     <servlet>
         <servlet-name>RedirectServlet</servlet-name>
-        <servlet-class>servlets.RedirectServlet</servlet-class>
+        <servlet-class>servlets.servlets.RedirectServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RedirectServlet</servlet-name>
@@ -38,7 +38,7 @@
 
     <servlet>
         <servlet-name>ForwardServlet</servlet-name>
-        <servlet-class>servlets.ForwardServlet</servlet-class>
+        <servlet-class>servlets.servlets.ForwardServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ForwardServlet</servlet-name>
@@ -47,7 +47,7 @@
 
     <servlet>
         <servlet-name>CounterServlet</servlet-name>
-        <servlet-class>servlets.SessionServlet</servlet-class>
+        <servlet-class>servlets.servlets.SessionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CounterServlet</servlet-name>
@@ -56,7 +56,7 @@
 
     <servlet>
         <servlet-name>UserServlet</servlet-name>
-        <servlet-class>servlets.UserAuthServlet</servlet-class>
+        <servlet-class>servlets.servlets.UserAuthServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserServlet</servlet-name>
@@ -90,4 +90,138 @@
         <servlet-name>DeleteCookies</servlet-name>
         <url-pattern>/delcookies</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SubjectsServlet</servlet-name>
+        <servlet-class>servlets.jdbc.SubjectsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubjectsServlet</servlet-name>
+        <url-pattern>/subjects</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CourseSaveServlet</servlet-name>
+        <servlet-class>servlets.servlets.CourseSaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CourseSaveServlet</servlet-name>
+        <url-pattern>/user/save</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CourseUpdateServlet</servlet-name>
+        <servlet-class>servlets.servlets.CourseUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CourseUpdateServlet</servlet-name>
+        <url-pattern>/user/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>servlets.servlets.StudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/students</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>filters.CharsetFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>LoggerFilter</filter-name>
+        <filter-class>filters.LoggingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoggerFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>filters.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/courses</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/pages/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>LoginPage</servlet-name>
+        <jsp-file>/pages/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginPage</servlet-name>
+        <url-pattern>/courses</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdatePage</servlet-name>
+        <jsp-file>/pages/update.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdatePage</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeletePage</servlet-name>
+        <jsp-file>/pages/delete.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeletePage</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>servlets.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Localization</servlet-name>
+        <servlet-class>servlets.servlets.LanguageSelector</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>JsonFile</servlet-name>
+        <servlet-class>servlets.servlets.GenerateJsonFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JsonFile</servlet-name>
+        <url-pattern>/downloadJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Localization</servlet-name>
+        <url-pattern>/confirm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PdfCreator</servlet-name>
+        <servlet-class>servlets.servlets.PdfCreatorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PdfCreator</servlet-name>
+        <url-pattern>/getPdfFile</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
