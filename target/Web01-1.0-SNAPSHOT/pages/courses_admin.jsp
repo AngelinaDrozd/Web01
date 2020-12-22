@@ -21,11 +21,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
-    <style>
-        @import "../styles/dropbox.css";
-        @import "../bootstrap/css/bootstrap.css";
-        @import "../bootstrap/css/bootstrap.min.css";
-    </style>
+
 </head>
 <body>
 
@@ -110,7 +106,6 @@
     <ul>
         <li><a href="confirm?cookieLocale=en_US"><fmt:message key="lang.en"/></a></li>
         <li><a href="confirm?cookieLocale=uk_UA"><fmt:message key="lang.ua"/></a></li>
-        <li><a href="confirm?cookieLocale=de_DE"><fmt:message key="lang.de"/></a></li>
     </ul>
 </div>
 

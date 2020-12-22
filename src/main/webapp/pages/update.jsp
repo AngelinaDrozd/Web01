@@ -11,10 +11,6 @@
 <html>
 <head>
     <title>Редагування</title>
-    <style>
-        @import "../bootstrap/css/bootstrap.css";
-        @import "../bootstrap/css/bootstrap.min.css";
-    </style>
 </head>
 <body>
 

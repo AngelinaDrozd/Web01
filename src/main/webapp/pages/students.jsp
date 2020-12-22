@@ -8,11 +8,6 @@
 <html>
 <head>
     <title>Students</title>
-    <style>
-        @import "../styles/dropbox.css";
-        @import "../bootstrap/css/bootstrap.css";
-        @import "../bootstrap/css/bootstrap.min.css";
-    </style>
 </head>
 <body>
 

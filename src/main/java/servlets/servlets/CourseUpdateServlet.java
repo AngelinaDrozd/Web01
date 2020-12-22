@@ -4,7 +4,6 @@ package servlets.servlets;
 import dao.LecturerDaoImpl;
 import dao.SubjectDao;
 import dao.SubjectDaoImpl;
-import db.ConnectionFactory;
 import model.Subject;
 
 import javax.servlet.RequestDispatcher;
@@ -13,9 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 public class CourseUpdateServlet extends HttpServlet {
     @Override

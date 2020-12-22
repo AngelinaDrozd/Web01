@@ -1,16 +1,18 @@
 package servlets.servlets;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dao.SubjectDao;
 import dao.SubjectDaoImpl;
 import model.Subject;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 

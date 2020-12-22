@@ -55,11 +55,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>UserServlet</servlet-name>
+        <servlet-name>UserAuthServlet</servlet-name>
         <servlet-class>servlets.servlets.UserAuthServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UserServlet</servlet-name>
+        <servlet-name>UserAuthServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
@@ -153,7 +153,6 @@
         <filter-name>AuthFilter</filter-name>
         <url-pattern>/courses</url-pattern>
     </filter-mapping>
-
     <filter-mapping>
         <filter-name>AuthFilter</filter-name>
         <url-pattern>/pages/*</url-pattern>

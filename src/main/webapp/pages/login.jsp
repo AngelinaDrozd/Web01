@@ -1,19 +1,30 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: USER
-  Date: 12.11.2020
-  Time: 12:47
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+
+<fmt:setBundle basename="message"/>
+
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-<form action="/login">
-    <input type="text" name="username" id="username">
-    <input type="submit" value="In">
-</form>
+<div style="display: block; margin: auto; width: 300px; height: 200px">
+    <form method="post" action="">
+        </br>
+        <div align="left">
+            <label for="login" class="form-label"><fmt:message key="user.login"/></label>
+            <input type="text" class="form-control" placeholder=<fmt:message key="user.login"/> name="login" id="login"
+                   required>
+        </div>
+        <div align="left">
+            <label for="pwd" class="form-label"><fmt:message key="user.password"/></label>
+            <input type="password" class="form-control" placeholder=<fmt:message key="user.password"/> name="pwd" id="pwd" required>
+        </div>
+        <br>
+        <div align="rigth">
+            <input type="submit" class="btn btn-info" value=<fmt:message key="button.enter"/> >
+        </div>
+    </form>
+</div>
 </body>
 </html>

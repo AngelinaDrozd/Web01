@@ -14,10 +14,6 @@
 
 <head>
     <title><fmt:message key="site_title"/></title>
-    <style>
-        @import "../bootstrap/css/bootstrap.css";
-        @import "../bootstrap/css/bootstrap.min.css";
-    </style>
 </head>
 <body>
 <div style="padding: 20px">
@@ -64,7 +60,6 @@
             <li><a href="confirm?cookieLocale=en_US"><fmt:message key="lang.en" /></a></li>
             <%--        <li><a href="?cookieLocale=uk_UA"><fmt:message key="lang.ua" /></a></li>--%>
             <li><a href="confirm?cookieLocale=uk_UA"><fmt:message key="lang.ua" /></a></li>
-            <li><a href="confirm?cookieLocale=de_DE"><fmt:message key="lang.de" /></a></li>
         </ul>
     </div>
 

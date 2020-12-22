@@ -27,7 +27,7 @@ public class SubjectsServlet extends HttpServlet {
 
         try {
             Connection connection = DriverManager.getConnection(
-                    connectionProperties.getProperty("url"),
+                    "jdbc:mysql://127.0.0.1:3306/lesson?serverTimezone=UTC&useLegacyDatetimeCode=false",
                     connectionProperties.getProperty("user"),
                     connectionProperties.getProperty("password"));
 
