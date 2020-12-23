@@ -3,7 +3,7 @@
     <title>Error 404</title>
     <style>
         body {
-            background-image: url("../imeges/error-404.jpg");
+            background-image: url("../imeges/e.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
