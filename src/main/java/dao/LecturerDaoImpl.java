@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-public class LecturerDaoImpl implements  LecturersDao{
+public class LecturerDaoImpl implements  LecturersDao {
     @Override
     public List<Lecturer> listLecturers() {
         List<Lecturer> list = new ArrayList<>();

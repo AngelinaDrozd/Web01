@@ -31,10 +31,13 @@
         <tr>
             <td>${student.name}</td>
             <td>${student.surname}</td>
-            <td align="center"><a href="/user/details?id=${student.id}"><img
-                    src="../images/book.png" alt="Detail" width="24"></a></td>
+            <td align="center"><a href="/user/details?id=${student.id}"></a></td>
         </tr>
     </c:forEach>
 </table>
+<div id="report_div">
+    <p><a href="/getPdfFile" target="_blank">Get report in PDF</a></p>
+    <p><a href="/downloadJson">Отримати звіт-файл у форматі JSON</a></p>
+</div>
 </body>
 </html>

@@ -27,53 +27,11 @@ public class PdfCreatorServlet extends HttpServlet {
         try {
             PdfWriter pdfWriter = PdfWriter.getInstance(doc, baos);
             doc.open();
-
-            PdfPTable table = new PdfPTable(3);
-            table.setWidthPercentage(100);
-            table.setSpacingBefore(10f);
-            table.setSpacingAfter(10f);
-
-            float[] columnWidths = {3f, 3f, 1f};
-            table.setWidths(columnWidths);
-
-            SubjectDao subjectDao = new SubjectDaoImpl();
-            List<Subject> subjectList = subjectDao.listSubjects();
-
-            String fontName = "/fonts/Autoproject.ttf";
-            BaseFont bf = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-            Font f = new Font(bf, 12);
-
-            for (Subject s: subjectList) {
-
-                Paragraph paragraph1 = new Paragraph(s.getTitle(), f);
-                PdfPCell cell1 = new PdfPCell(paragraph1);
-                cell1.setBorderColor(BaseColor.BLACK);
-                cell1.setPaddingLeft(10);
-                cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
-                cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
-
-                Paragraph paragraph2 = new Paragraph(s.getLecturer(), f);
-                PdfPCell cell2 = new PdfPCell(paragraph2);
-                cell1.setBorderColor(BaseColor.BLACK);
-                cell2.setPaddingLeft(10);
-                cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
-                cell2.setVerticalAlignment(Element.ALIGN_MIDDLE);
-
-                Paragraph paragraph3 = new Paragraph(String.valueOf(s.getCredits()), f);
-                PdfPCell cell3 = new PdfPCell(paragraph3);
-                cell1.setBorderColor(BaseColor.BLACK);
-                cell3.setPaddingLeft(10);
-                cell3.setHorizontalAlignment(Element.ALIGN_CENTER);
-                cell3.setVerticalAlignment(Element.ALIGN_MIDDLE);
-
-                table.addCell(cell1);
-                table.addCell(cell2);
-                table.addCell(cell3);
-            }
-
-            doc.add(table);
-            doc.close();
+            doc.add(new Paragraph(
+                    "1. Angelina Drozd"
+            ));
             pdfWriter.close();
+
         } catch (DocumentException e) {
             e.printStackTrace();
         }

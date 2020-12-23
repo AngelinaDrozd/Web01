@@ -198,6 +198,11 @@
         <servlet-name>Localization</servlet-name>
         <servlet-class>servlets.servlets.LanguageSelector</servlet-class>
     </servlet>
+    <servlet-mapping>
+    <servlet-name>Localization</servlet-name>
+    <url-pattern>/confirm</url-pattern>
+</servlet-mapping>
+
 
     <servlet>
         <servlet-name>JsonFile</servlet-name>
@@ -208,10 +213,6 @@
         <url-pattern>/downloadJson</url-pattern>
     </servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>Localization</servlet-name>
-        <url-pattern>/confirm</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>PdfCreator</servlet-name>
@@ -221,6 +222,11 @@
         <servlet-name>PdfCreator</servlet-name>
         <url-pattern>/getPdfFile</url-pattern>
     </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/pages/error404.jsp</location>
+    </error-page>
 
 
 </web-app>
